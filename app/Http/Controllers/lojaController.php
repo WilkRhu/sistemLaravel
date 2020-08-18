@@ -139,3 +139,4 @@ class lojaController extends Controller
             return response()->json("Loja não encontrada", 404);
     }
 }
+
