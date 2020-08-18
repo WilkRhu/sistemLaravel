@@ -133,6 +133,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -148,7 +149,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597709704181</updated>
-      <workItem from="1597709705794" duration="3597000" />
+      <workItem from="1597709705794" duration="17313000" />
     </task>
     <servers />
   </component>
@@ -156,9 +157,25 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2223" y="225" key="search.everywhere.popup" timestamp="1597709857634">
+    <state x="2014" y="175" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597716331781">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
-    <state x="2223" y="225" key="search.everywhere.popup/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1597709857634" />
+    <state x="2014" y="175" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1597716331781" />
+    <state x="2365" y="202" key="#com.intellij.ide.util.MemberChooser" timestamp="1597722613056">
+      <screen x="1600" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2365" y="202" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1597722613056" />
+    <state x="2061" y="165" key="SettingsEditor" timestamp="1597716555455">
+      <screen x="1600" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2061" y="165" key="SettingsEditor/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1597716555455" />
+    <state x="2216" y="240" key="run.anything.popup" timestamp="1597717213724">
+      <screen x="1600" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2216" y="240" key="run.anything.popup/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1597717213724" />
+    <state x="2223" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1597724524049">
+      <screen x="1600" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2223" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1597724524049" />
   </component>
 </project>

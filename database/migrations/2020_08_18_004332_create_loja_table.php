@@ -16,7 +16,8 @@ class CreateLojaTable extends Migration
         Schema::create('loja', function (Blueprint $table) {
             $table->increments("id");
             $table->string("nome_da_loja");
-            $table->string("email")->unique();
+            $table->string("email");
+            $table->unique("email", "loja_unique_email");
             $table->timestamps();
         });
     }
