@@ -14,6 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+/*Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
-});
+}); */
+
+//============================ Rota Api Loja ======================//
+    Route::get("/loja", "lojaController@index");
+    Route::get("/loja/{id}", "lojaController@show");
+    Route::post("/loja", "lojaController@store");
+    Route::put("/loja/{id}", "lojaController@update");
+    Route::delete("/loja/{id}", "lojaController@destroy");
+//==================================================================//
+
+
