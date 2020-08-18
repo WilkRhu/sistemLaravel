@@ -18,8 +18,10 @@ use Illuminate\Support\Facades\Route;
     return $request->user();
 }); */
 
-Route::get("/loja", "lojaController@index");
-Route::get("/loja/{id}", "lojaController@show");
-Route::post("/loja", "lojaController@store");
-Route::put("/loja/{id}", "lojaController@update");
-Route::delete("/loja/{id}", "lojaController@destroy");
+//=========================Rota Loja API=================//
+        Route::get("/loja", "lojaController@index");
+        Route::get("/loja/{id}", "lojaController@show");
+        Route::post("/loja", "lojaController@store");
+        Route::put("/loja/{id}", "lojaController@update");
+        Route::delete("/loja/{id}", "lojaController@destroy");
+//=============================================================//
