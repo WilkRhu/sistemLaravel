@@ -11,7 +11,7 @@ class Helper
 {
     public static function enviMail($email, $tipo) {
         Mail::raw("Produto Atualizado", function($message) use($email) {
-            $message->from("mail@wilkcaetano.com.br");
+            $message->from("wilk.caetano@gmail.com");
             $message->subject('Cadastro do Produto Realizado');
             $message->to($email);
         });
