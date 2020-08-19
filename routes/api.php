@@ -28,3 +28,6 @@ use Illuminate\Support\Facades\Route;
 
         Route::get("/produto", "produtosController@index");
         Route::post("/produto", "produtosController@store");
+        Route::put("/produto/{id}", "produtosController@update");
+        Route::get("/produto/{id}", "produtosController@show");
+        Route::delete("/produto/{id}", "produtosController@destroy");

@@ -38,7 +38,7 @@ return [
             'transport' => 'smtp',
             'host' => env('MAIL_HOST'),
             'port' => env('MAIL_PORT', 587),
-            'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+            'encryption' => env('MAIL_ENCRYPTION', 'ssl'),
             'username' => env('MAIL_USERNAME'),
             'password' => env('MAIL_PASSWORD'),
             'timeout' => null,
@@ -84,8 +84,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'wilk.caetano@gmail.com'),
-        'name' => env('MAIL_FROM_NAME', 'Cadastro produto'),
+        'address' => env('MAIL_FROM_ADDRESS', 'mail@wilkcaetano.com.br'),
+        'name' => env('MAIL_FROM_NAME', 'Referente a produto'),
     ],
 
     /*

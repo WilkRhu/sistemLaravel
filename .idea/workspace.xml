@@ -18,6 +18,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
@@ -124,6 +127,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1gFUC1teSpVZq4UZLEy2WVUJwOp" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -169,6 +173,10 @@
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="2290" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1597768480672" />
+    <state x="2327" y="243" key="NewPhpClassDialog" timestamp="1597800267997">
+      <screen x="1600" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2327" y="243" key="NewPhpClassDialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1597800267997" />
     <state x="2061" y="165" key="SettingsEditor" timestamp="1597716555455">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>

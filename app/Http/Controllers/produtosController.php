@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\Helper;
 use App\Loja;
 use App\Produtos;
 use Illuminate\Http\Request;
@@ -24,7 +25,15 @@ class produtosController extends Controller
      */
     public function index()
     {
-        return response()->json("Retorno!");
+        $produto = Produtos::all();
+        if (count($produto) > 0) {
+            $newProduto = Helper::valorLojas($produto);
+            return response()->json($newProduto, 200);
+        }
+        else {
+            return response()->json("Não há produtos cadastradas", 400);
+
+        }
     }
 
     /**
@@ -58,17 +67,8 @@ class produtosController extends Controller
             $produto->save();
             $loja = Loja::find($produto->loja_id);
             $email = $loja->email;
-            Mail::send("mail.cadProduto", ["produto" => $produto->nome], function($message) use($email) {
-                $message->from("wilk.caetano@gmail.com");
-                $message->subject('Cadastro do Produto Realizado');
-                $message->to($email);
-            });
-            $newProduto = [
-                "nome" => $produto->nome,
-                "valor" => "R$:".intval($produto->valor).",00",
-                "loja_id" => $produto->loja_id,
-                "ativo" => $produto->ativo
-            ];
+            Helper::enviMail($email, "Produto Cadastrado");
+            $newProduto = Helper::valor($produto);
             return response()->json($newProduto, 201);
         }
     }
@@ -81,7 +81,15 @@ class produtosController extends Controller
      */
     public function show($id)
     {
-        //
+        $produto = Produtos::find($id);
+        if ($produto) {
+            $newProduto = Helper::valor($produto);
+            return response()->json($newProduto, 200);
+        }
+        else{
+            return response()->json("Produto não encontrado", 404);
+        }
+
     }
 
     /**
@@ -104,7 +112,25 @@ class produtosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validate = validator($request->all(), $this->produto->rules, $this->produto->message);
+        if ($validate->fails()) {
+            return response()
+                ->json($validate->errors(), 400);
+        } else {
+            $loja = Loja::find($request->post("loja_id"));
+            if (!empty($loja)) {
+                $produto = Produtos::find($id);
+                $dados = $request->all();
+                $produto->update($dados);
+                $email = $loja->email;
+                Helper::enviMail($email, "Produto Atualizado");
+               $objectProduto = Helper::valor($produto);
+
+                return response()->json($objectProduto, 201);
+            } else {
+                return response()->json("Loja não cadastrada em nossa base de dados", 404);
+            }
+        }
     }
 
     /**
@@ -115,6 +141,11 @@ class produtosController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $produto = Produtos::find($id);
+        if ($produto) {
+            $produto->delete();
+            return response()->json("Produto deletado com sucesso", 200);
+        } else
+            return response()->json("Produto não encontrado", 404);
     }
 }
