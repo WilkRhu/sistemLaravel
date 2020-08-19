@@ -4,17 +4,15 @@
 namespace App\Helpers;
 
 
+use App\Mail\SendMailUser;
 use App\Produtos;
+use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Support\Facades\Mail;
 
 class Helper
 {
     public static function enviMail($email, $tipo) {
-        Mail::raw("Produto Atualizado", function($message) use($email) {
-            $message->from("wilk.caetano@gmail.com");
-            $message->subject('Cadastro do Produto Realizado');
-            $message->to($email);
-        });
+            Mail::to($email)->send(new SendMailUser());
     }
 
     public static function valor($produto) {

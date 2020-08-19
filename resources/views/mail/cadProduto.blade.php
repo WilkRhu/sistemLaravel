@@ -10,7 +10,7 @@
 <body>
 <div class="container">
     <div class="col-md-12">
-        <h2>O produto {{ $produto }} foi cadastrado no sistema da sua loja!</h2>
+        <h2>O produto  foi cadastrado no sistema da sua loja!</h2>
     </div>
 </div>
 </body>
