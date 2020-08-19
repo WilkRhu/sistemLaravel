@@ -6,13 +6,12 @@ namespace App\Helpers;
 
 use App\Mail\SendMailUser;
 use App\Produtos;
-use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Support\Facades\Mail;
 
 class Helper
 {
     public static function enviMail($email, $tipo) {
-            Mail::to($email)->send(new SendMailUser());
+            //Mail::to($email)->send(new SendMailUser("mail.cadProduto")); Email chama a view que passa a mensagen quando o produto é cadastrado
     }
 
     public static function valor($produto) {
@@ -27,30 +26,25 @@ class Helper
             "nome" => $produto->nome,
             "valor" => $novoValor,
             "loja_id" => $produto->loja_id,
-            "ativo" => $produto->ativo
+            "ativo" => $produto->ativo,
+            "created_at" => $produto->created_at,
+            "updated_at" => $produto->updated_at
         ];
 
         return $newProduto;
     }
 
-    public static function valorLojas($produtos) {
+    public static function valorProdutos($produtos) {
         $newArray = [];
         foreach ($produtos as $produto) {
             $valor = $produto->valor;
             if(strlen($valor) > 3 ){
-                $novoValor = "R$: ".number_format($valor, 2, ",", ".");
+                $produto->valor = "R$: ".number_format($valor, 2, ",", ".");
             } else {
-                $novoValor = "R$: ".number_format($valor, 2, ",", "");
+                $produto->valor = "R$: ".number_format($valor, 2, ",", "");
             }
-            array_push($newArray, [
-                "id" => $produto->id,
-                "nome" => $produto->nome,
-                "valor" => $novoValor,
-                "loja_id" => $produto->loja_id,
-                "ativo" => $produto->ativo
-            ]);
-        }
-        return $newArray;
+            array_push($newArray, $produto);
 
+        }
     }
 }

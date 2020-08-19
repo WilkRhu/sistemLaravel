@@ -111,7 +111,7 @@ class lojaController extends Controller
             return response()
                 ->json($validate->errors(), 400);
         } else {
-            $loja = Loja::find($id);
+            $loja = $this->loja->find($id);
             if ($loja) {
                 $dados = $request->all();
                 $loja->update($dados);
@@ -131,7 +131,7 @@ class lojaController extends Controller
      */
     public function destroy($id)
     {
-        $loja = Loja::find($id);
+        $loja = $this->loja->find($id);
         if ($loja) {
             $loja->delete();
             return response()->json("Loja deletada com sucesso", 200);

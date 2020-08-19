@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="daea0c3a-1ec8-409d-8860-a48b8fac9081" name="Default Changelist" comment="" />
+    <list default="true" id="daea0c3a-1ec8-409d-8860-a48b8fac9081" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Helpers/Helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/Helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/lojaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/lojaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/produtosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/produtosController.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -155,6 +160,7 @@
       <option name="presentableId" value="Default" />
       <updated>1597709704181</updated>
       <workItem from="1597709705794" duration="17313000" />
+      <workItem from="1597843330725" duration="5669000" />
     </task>
     <servers />
   </component>
@@ -182,10 +188,11 @@
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="2061" y="165" key="SettingsEditor/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1597716555455" />
-    <state x="2216" y="240" key="run.anything.popup" timestamp="1597717213724">
-      <screen x="1600" y="0" width="1920" height="1040" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1597819378054">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="2216" y="240" key="run.anything.popup/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1597717213724" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1597819378054" />
     <state x="2223" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1597724524049">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
