@@ -1,0 +1,5 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/user/sistema.wilkcaetano.com.br/
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp style.css $DEPLOYPATH
